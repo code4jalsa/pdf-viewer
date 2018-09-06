@@ -1,0 +1,13 @@
+<div> 
+<label>
+  pdf src
+</label>
+<input type="file" (change)="onFileSelected()" id="file">
+<input type="text" [(ngModel)]="page" id="page">
+</div>
+<pdf-viewer [src]="pdfSrc" 
+  [render-text]="true"
+  [page]="page"
+  [show-all] = "false"
+  style="display:block">
+</pdf-viewer>
